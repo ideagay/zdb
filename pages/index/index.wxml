@@ -1,0 +1,58 @@
+<!--index.wxml-->
+<view class="pg-index">
+  <view class="userinfo">
+    <view>
+      <view>
+      <text class="nickname">{{userInfo.nickName}}</text>
+       </view> 
+      <view>
+        <text class="level">等级：试用</text>
+      </view>
+    </view>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+  </view>
+  <view class="section2">
+    <view class="top">
+      <text>升级店长 享超值权益</text>
+      <view bindtap="applyTap" class="dash-button">立即开通</view>
+    </view>
+    <view class="content">
+      <image mode="widthFix" src="/assets/index_section2.png" style="width: 100%"></image>
+    </view>
+  </view>
+  <view class="section3">
+    <image mode="widthFix" src="/assets/index_section3.png"></image>
+  </view>
+  <view class="section4">
+    <view class="title">
+      <text>店长权益</text>
+    </view>
+    <view class="list">
+      <image class="item1" src="/assets/index_section4_icon1.png"></image>
+      <view class="item2">
+        <text class="text1">赚点呗点餐最高可领31元红包</text>
+        <view>
+        <text class="text2">先领红包再下单</text>
+        </view>
+      </view>
+      <view class="item3">
+      领取 >
+      </view>
+    </view>
+    <view class="list">
+      <image class="item1" src="/assets/index_section4_icon2.png"></image>
+      <view class="item2">
+        <text class="text1">最高奖9元，最高月收入10000+</text>
+        <view>
+        <text class="text2">多分享多赚钱</text>
+        </view>
+      </view>
+      <view class="item3">
+      分享 >
+      </view>
+    </view>
+  </view>
+  <!-- <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+  </view> -->
+</view>

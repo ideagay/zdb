@@ -1,0 +1,26 @@
+<!--pages/apply/apply.wxml-->
+<view class="pg-apply">
+  <image class="topimg" mode="widthFix" src="/assets/apply/bg.png"></image>
+  <view class="wrapper">
+    <view class="apply-btn">仅需¥9.9元/年开通店长</view>
+    <view class="list">
+      <view wx:for="{{list}}" wx:key="index" class="item">
+        <image src="/assets/apply/icon{{index + 1}}.png" mode="cover"></image>
+        <text class="text1">{{item.text1}}</text>
+        <text class="text2">{{item.text2}}</text>
+      </view>
+    </view>
+    <view class="tip">
+      <text class="title">注意事项</text>
+      <view class="text">
+        <text >1、升级店长后可以进行推广赚收益，也可以取饿了么的下单返现</text>
+      </view>
+      <view class="text">
+      <text>2、升级店长的费用在任何情况下不予退款</text>
+      </view>
+      <view class="text">
+      <text>3、店长的推广二维码长期有效。店长的红包链接锁佣7天，建议红包链接每天更换</text>
+      </view>
+    </view>
+  </view>
+</view>
