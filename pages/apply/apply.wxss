@@ -54,6 +54,7 @@
   background: #ff4325;
   margin-bottom: 30rpx;
 }
+
 .tip {
   margin-top: 60rpx;
   background: #fafafa;

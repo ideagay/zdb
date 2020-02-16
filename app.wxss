@@ -7,3 +7,14 @@
   justify-content: space-between;
   box-sizing: border-box;
 } 
+.user-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  border-radius: 50%;
+}
+.user-level {
+  border: .5rpx solid #fff;
+  border-radius: 40rpx;
+  padding: 5rpx 20rpx;
+  font-size: 10px;
+}

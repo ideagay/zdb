@@ -1,1 +1,120 @@
 /* pages/rights.wxss */
+.pg-rights {
+  background: url('https://img.souche.com/f2e/16e481d5d4fb6f65c9923ac11d20a71d.png') no-repeat center top #f5f6f8;
+  background-size: 100% auto;
+  min-height: 100vh;
+}
+.userinfo {
+  display: flex;
+  color: #fff;
+  padding: 32rpx;
+  align-items: center;
+}
+.userinfo .user-avatar {
+  margin-right: 20rpx;
+}
+.userinfo .middle {
+  flex: 1;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20rpx 0 40rpx 0;
+}
+.content .money {
+  font-size: 40px;
+  color: #fff;
+}
+.content .money .unit {
+  font-size: 14px;
+}
+.content .tip {
+  color: #fff;
+  font-size: 12px;
+  margin-bottom: 40rpx;
+}
+.content .btn {
+  color: #108ee9;
+  font-weight: bold;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  font-size: 12px;
+  border-radius: 100rpx;
+  padding: 0 50rpx;
+  background-image: linear-gradient(#fff, #f5f6f8);
+}
+.income-pane {
+  background: #f5f6f8;
+  border-top-left-radius: 40rpx;
+  border-top-right-radius: 40rpx;
+  padding-bottom: 20rpx; 
+}
+.tabpane {
+  display: flex;
+  margin-bottom: 30rpx;
+}
+.tabpane .item {
+  width: 33%;
+  text-align: center;
+  height: 100rpx;
+  line-height: 100rpx;
+  position: relative;
+}
+.tabpane .item.active::after {
+  display: block;
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  margin-left: -10%;
+  width: 20%;
+  height: 8rpx;
+  background: #108ee9;
+}
+.list {
+  padding: 0 16rpx;
+}
+.list .item {
+  background: #fff;
+  border-radius: 10rpx;
+  margin-bottom: 20rpx;
+  padding: 0 32rpx 0 32rpx;
+}
+.list .item .date {
+  color: #999;
+  width: 100%;
+  font-size: 12px;
+  padding: 20rpx 0;
+  border-bottom: .5rpx solid #f2f2f2;
+  line-height: 1;
+}
+.list .item .data {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: 20rpx 10rpx;
+}
+.list .item .data .title {
+  font-size: 12px;
+  color: #999;
+}
+.list .item .data .num {
+  color: #108ee9;
+  font-weight: bolder;
+  font-size: 20px;
+}
+.list .item .data .num .unit {
+  font-size: 12px;
+}
+.list .item .data .l1 {
+  width: 40%;
+}
+.list .item .data .l2 {
+  width: 33%
+}
+.list .item .data .l3 {
+  width: 27%;
+} 

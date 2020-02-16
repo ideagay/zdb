@@ -2,7 +2,7 @@
 <view class="pg-apply">
   <image class="topimg" mode="widthFix" src="/assets/apply/bg.png"></image>
   <view class="wrapper">
-    <view class="apply-btn">仅需¥9.9元/年开通店长</view>
+    <view class="apply-btn" bindtap="applyTap">仅需¥9.9元/年开通店长</view>
     <view class="list">
       <view wx:for="{{list}}" wx:key="index" class="item">
         <image src="/assets/apply/icon{{index + 1}}.png" mode="cover"></image>
@@ -23,4 +23,8 @@
       </view>
     </view>
   </view>
+  <mp-dialog title="提示" show="{{dialogShow}}" bindbuttontap="tapDialogButton" buttons="{{oneButton}}">
+        <view>请添加微信号：xxxxx，</view>
+        <view>开通店长</view>
+    </mp-dialog>
 </view>

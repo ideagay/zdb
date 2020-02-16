@@ -1,0 +1,63 @@
+/* pages/hongbao/hongbao.wxss */
+page {
+  background: #ff5220;
+  padding-bottom: 120rpx;
+}
+.content {
+  padding: 20rpx 16rpx;
+  box-sizing: border-box;
+}
+.content .wrap {
+  background: #fff;
+  border-radius: 10rpx;
+  padding: 32rpx;
+}
+.bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 -1px 2px #e6e6e6;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20rpx 44rpx;
+  box-sizing: border-box;
+}
+.bottom .btn{
+  background: #ff4325;
+  color: #fff;
+  display: block;
+  padding: 10rpx 60rpx;
+  border-radius: 40rpx;
+}
+.bottom .num {
+  color: #ff4325;
+}
+.bottom .text {
+  font-size: 14px;
+}
+.tip {
+  margin-top: 60rpx;
+  background: #fafafa;
+  border-radius: 10rpx;
+  color: #666;
+  font-size: 14px;
+  padding: 40rpx 20rpx;
+  position: relative;
+}
+.tip .title {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #ff4325;
+  color: #fff;
+  font-size: 12px;
+  padding: 4rpx 20rpx;
+  border-top-left-radius: 10rpx;
+  border-bottom-right-radius: 10rpx;
+}
+.tip .text {
+  margin-top: 34rpx;
+}

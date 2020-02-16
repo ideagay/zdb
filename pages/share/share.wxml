@@ -1,0 +1,59 @@
+<!--pages/share/share.wxml-->
+<view>
+  <image src="/assets/share/top.png" style="width: 100%" mode="widthFix"></image>
+  <view class="content">
+    <view class="tabpane">
+        <view data-num="1" class="item {{tabActive === '1' ? 'active' : ''}}"       bindtap="tabSwitch">返现规则</view>
+        <view data-num="2" class="item {{tabActive === '2' ? 'active' : ''}}" bindtap="tabSwitch">奖励制度</view>
+    </view>
+    <view wx:if="{{tabActive === '1'}}">
+      <view class="tip">
+        分享好友领红包下单，赚返利
+      </view>
+      <view class="text">
+        1、以实际支付金额计算，最高返现<span class="red">4.8%</span>
+      </view>
+      <view class="text">
+        2、必须使用从本页获取到的红包领券，领券后<span class="red">7天</span>内点餐第
+     一单（不管是否用券）均有返现
+      </view>
+      <view class="text">
+        3、每次领券后仅返现<span class="red">一次</span>，若需要<span class="red">第二次</span>返现请重新领。(
+     每个手机号每天可领一次）
+      </view>
+      <view class="text">
+        4、下单后<span class="red">最晚半小时</span>内同步订单，请耐心等待
+      </view>
+      <view class="text">
+        5、外卖配送员送货到家后，即为确认收货
+      </view>
+      <view class="text">
+        6、次月<span class="red">25日</span>可提现上月确认收货的订单佣金
+      </view>
+    </view>
+    <view wx:else>
+      <view class="tip">
+        分享好用开通店长，赚提成
+      </view>
+      <view class="table">
+        <view class="item title top-left">级别</view>
+        <view class="item title">数量</view>
+        <view class="item title">奖励标准</view>
+        <view class="item title top-right">返现奖励</view>
+        <view class="item">店长</view>
+        <view class="item">5~10个</view>
+        <view class="item">5/个</view>
+        <view class="item">3%返现</view>
+        <view class="item">经理</view>
+        <view class="item">21~50个</view>
+        <view class="item">7/个</view>
+        <view class="item">3.5%返现</view>
+        <view class="item last-line">合伙人</view>
+        <view class="item last-line">50个以上</view>
+        <view class="item last-line">9/个</view>
+        <view class="item last-line">4%返现</view>
+      </view>
+      <view class="btn">招募我的店长</view>
+    </view>
+  </view>
+</view>

@@ -1,9 +1,11 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/logs/logs",
+    "pages/apply/apply",
+    "pages/share/share",
+    "pages/hongbao/hongbao",
     "pages/rights/rights",
-    "pages/apply/apply"
+    "pages/logs/logs"
   ],
   "window": {
     "backgroundTextStyle": "light",

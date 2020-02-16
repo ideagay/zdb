@@ -15,6 +15,16 @@ Page({
       url: '../apply/apply'
     })
   },
+  shareTap: function () {
+    wx.navigateTo({
+      url: '../share/share'
+    })
+  },
+  hongbaoTap: function () {
+    wx.navigateTo({
+      url: '../hongbao/hongbao'
+    })
+  },
   onLoad: function () {
     this.setData({
       nbTitle: '赚点呗',

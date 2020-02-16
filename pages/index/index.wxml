@@ -6,10 +6,10 @@
       <text class="nickname">{{userInfo.nickName}}</text>
        </view> 
       <view>
-        <text class="level">等级：试用</text>
+        <text class="user-level">等级：试用</text>
       </view>
     </view>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <image bindtap="bindViewTap" class="user-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
   </view>
   <view class="section2">
     <view class="top">
@@ -35,7 +35,7 @@
         <text class="text2">先领红包再下单</text>
         </view>
       </view>
-      <view class="item3">
+      <view class="item3" bindtap="hongbaoTap">
       领取 >
       </view>
     </view>
@@ -47,7 +47,7 @@
         <text class="text2">多分享多赚钱</text>
         </view>
       </view>
-      <view class="item3">
+      <view class="item3" bindtap="shareTap">
       分享 >
       </view>
     </view>

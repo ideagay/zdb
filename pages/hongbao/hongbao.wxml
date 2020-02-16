@@ -1,0 +1,26 @@
+<!--pages/hongbao/hongbao.wxml-->
+<view>
+  <image src="/assets/hongbao/top.png" style="width:100%" mode="widthFix"></image>
+  <view class="content">
+    <view class="wrap">
+      <image src="/assets/hongbao/step.jpg" style="width: 100%" mode="widthFix"></image>
+      <view class="tip">
+      <text class="title">注意事项</text>
+      <view class="text">
+        <text >1、在点餐当中一定要保证我们的手机号和我们在**领取的红包的手机号一定要一致。</text>
+      </view>
+      <view class="text">
+      <text>2、如果我们想保证自己的外卖能够有下单返现的话，一定要领我们自己的红包链接，切勿领取别人的红包。</text>
+      </view>
+      <view class="text">
+      <text>3、点餐当中如果红包不可用，我们一定要点开红包抵用券查看不可用的原因。</text>
+      </view>
+    </view>
+    </view>
+  </view>
+
+  <view class="bottom">
+    <view class="text">已有<text class="num">2333</text>人去领券</view>
+    <view class="btn">立即领券</view>
+  </view>
+</view>

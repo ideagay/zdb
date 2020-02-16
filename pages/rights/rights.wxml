@@ -1,2 +1,71 @@
 <!--pages/rights.wxml-->
-<text>pages/rights.wxml</text>
+<view class="pg-rights">
+  <view class="userinfo">
+    <image bindtap="bindViewTap" class="user-avatar" src="{{userInfo.avatarUrl}}"         mode="cover"></image>
+    <view class="middle">
+      <view>
+          <text class="nickname">{{userInfo.nickName}}</text>
+       </view> 
+    </view>
+    <view>
+        <text class="user-level">等级：试用</text>
+      </view>  
+  </view>
+  <view class="content">
+    <view class="money">333<text class="unit">元</text></view>
+    <view class="tip">每个月25号提现上个自然月的所有收入</view>
+    <view class="btn">立即提现</view>
+  </view>
+  <view class="income-pane">
+    <view class="tabpane">
+      <view data-num="1" class="item {{tabActive === '1' ? 'active' : ''}}" bindtap="tabSwitch">今日预估</view>
+      <view data-num="2" class="item {{tabActive === '2' ? 'active' : ''}}" bindtap="tabSwitch">昨日预估</view>
+      <view data-num="3" class="item {{tabActive === '3' ? 'active' : ''}}" bindtap="tabSwitch">本月预估</view>
+    </view>
+    <view class="list">
+      <view class="item">
+        <view class="date">2081-01-23 16:00:00</view>
+        <view class="data">
+          <view class="data-item l1">
+            <view class="num">
+              +180<text class="unit">元</text>
+            </view>
+          </view>
+          <view class="data-item l2">
+            <view class="num">
+              66<text class="unit">单</text>
+            </view>
+          </view>
+          <view class="data-item l3">
+            我的返利
+          </view>
+          <view class="data-item l1 title">预估收入</view>
+          <view class="data-item l2 title">订单/收入</view>
+          <view class="data-item l3 title">收入来源</view>
+        </view>
+      </view>
+      <view class="item">
+        <view class="date">2081-01-23 16:00:00</view>
+        <view class="data">
+          <view class="data-item l1">
+            <view class="num">
+              +180<text class="unit">元</text>
+            </view>
+          </view>
+          <view class="data-item l2">
+            <view class="num">
+              66<text class="unit">个</text>
+            </view>
+          </view>
+          <view class="data-item l3">
+            招募店长
+          </view>
+          <view class="data-item l1 title">预估收入</view>
+          <view class="data-item l2 title">订单/收入</view>
+          <view class="data-item l3 title">收入来源</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
