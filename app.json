@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/bind/bind",
     "pages/apply/apply",
     "pages/share/share",
     "pages/hongbao/hongbao",
@@ -28,7 +29,7 @@
         "selectedIconPath": "assets/quanyi_selected.png",
         "iconPath": "assets/quanyi.png",
         "pagePath": "pages/rights/rights",
-        "text": "我的权益"
+        "text": "我的收益"
       }
     ]
   }

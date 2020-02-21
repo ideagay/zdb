@@ -1,0 +1,8 @@
+/* pages/bind/bind.wxss */
+.container {
+  padding: 64rpx;
+}
+.tip,
+.form {
+  margin-bottom: 40rpx;
+}

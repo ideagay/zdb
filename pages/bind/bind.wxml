@@ -1,0 +1,12 @@
+<!--pages/bind/bind.wxml-->
+<view class="container">
+  <view class="tip">
+    <text>请添加微信：xxx，获取并绑定店长码</text>
+  </view>
+
+  <view class="form">
+    <input class="weui-input" bindinput="bindKeyInput" placeholder="输入店长码"/>
+  </view>
+    <button style="width: 100%" type="primary" loading="{{loading}}"
+    bindtap="bindCodeTap">绑定</button>
+</view>

@@ -1,48 +1,23 @@
-// pages/apply/apply.js
+// pages/bind/bind.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    dialogShow: false,
-    oneButton: [{ text: '确定' }],
-    list: [
-      {
-        text1: '返利比例',
-        text2: '返利最高5%'
-      },
-      {
-        text1: '结算时间',
-        text2: '次月的10号%'
-      },
-      {
-        text1: '投入成本',
-        text2: '0成本投入'
-      },
-      {
-        text1: '风险评估',
-        text2: '无任何风险'
-      },
-      {
-        text1: '收入分析',
-        text2: '月收入10000+'
-      },
-      {
-        text1: '更多特权',
-        text2: '（开发中）'
-      }
-    ]
+    inputValue: '',
+    loading: false
   },
-  applyTap: function () {
-    wx.navigateTo({
-      url: '../bind/bind'
-    })
-  },
-  tapDialogButton: function () {
+  bindKeyInput: function(e) {
     this.setData({
-      dialogShow: false
+      inputValue: e.detail.value
     });
+  },
+  bindCodeTap: function() {
+    this.setData({
+      loading: true
+    });
+    console.log(this.data.inputValue);
   },
   /**
    * 生命周期函数--监听页面加载
