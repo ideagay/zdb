@@ -1,11 +1,7 @@
+const config = require('./config.js');
 //app.js
 App({
   onLaunch: function () {
-    // 展示本地存储能力
-    var logs = wx.getStorageSync('logs') || []
-    logs.unshift(Date.now())
-    wx.setStorageSync('logs', logs)
-
     // 登录
     wx.login({
       success: res => {
@@ -21,11 +17,11 @@ App({
                   withCredentials: true,
                   success: res => {
                     // 可以将 res 发送给后台解码出 unionId
-                    this.globalData.userInfo = res.userInfo;
+                    const that = this;
                     const { encryptedData, iv, userInfo } = res;
                     wx.request({
                       method: 'POST',
-                      url: 'http://localhost:3000/api/wxlogin',
+                      url: `${config.apiUrl}/wxlogin`,
                       data: {
                         encryptedData,
                         iv,
@@ -34,7 +30,9 @@ App({
                       },
                       success: function (res) {
                         if (res.statusCode === 200) {
-                          console.log(res.data);
+                          console.log(res.data.data);
+                          wx.setStorageSync('userInfo', res.data.data || userInfo);
+                          that.globalData.userInfo = res.data.data || userInfo;
                         }
                       }
                     })
@@ -48,7 +46,6 @@ App({
               }
             }
           })
-          
         } else {
           console.log('登录失败');
         }
@@ -57,6 +54,6 @@ App({
     
   },
   globalData: {
-    userInfo: null
+    userInfo: wx.getStorageSync('userInfo') || {}
   }
 })

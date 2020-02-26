@@ -1,4 +1,8 @@
 // pages/bind/bind.js
+const config = require('../../config.js');
+var app = getApp();
+var hasClick = false;
+
 Page({
 
   /**
@@ -14,10 +18,57 @@ Page({
     });
   },
   bindCodeTap: function() {
-    this.setData({
-      loading: true
-    });
-    console.log(this.data.inputValue);
+    if (hasClick) {
+      return;
+    }
+    const pid = this.data.inputValue;
+    if (!pid) {
+      return wx.showToast({
+        title: '请先输入会员码',
+        icon: 'none'
+      });
+    }
+    hasClick = true;
+    wx.showLoading();
+    const { openId, token } = app.globalData.userInfo;
+    wx.request({
+      method: 'POST',
+      url: `${config.apiUrl}/bindPid`,
+      data: {
+        pid,
+        openId,
+        token
+      },
+      success: function(res) {
+        console.log(res);
+        if (res.statusCode === 200) {
+          wx.showToast({
+            title: '恭喜你成功开通店长',
+            icon: 'success',
+            duration: 3000,
+            success: function() {
+              wx.switchTab({ url: '../rights/rights'});
+            }
+          });
+        } else {
+          wx.showToast({
+            icon: 'none',
+            title: res.data.message || '服务器异常'
+          });
+        }
+      },
+      fail: function(res) {
+        console.log(res);
+        wx.showToast({
+          title: '服务器异常',
+          icon: 'none'
+        });
+      },
+      complete: function (res) {
+        wx.hideLoading();
+        hasClick = false;
+      }
+    })
   },
   /**
    * 生命周期函数--监听页面加载
