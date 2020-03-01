@@ -2,6 +2,8 @@
 //获取应用实例
 const app = getApp()
 
+console.log(app.globalData.userInfo.pid);
+
 Page({
   data: {
     motto: 'Hello World',
@@ -39,10 +41,14 @@ Page({
       })
     }
   },
-  onShareAppMessage: function () {
+  onShareAppMessage: function (res) {
+    // if (res.from === 'button') {
+    //   // 来自页面内转发按钮
+    // }
+    console.log(res);
     return {
-      title: '自定义转发标题',
-      path: '/pages/logs?id=123'
+      title: "这个小程序真好",
+      path: '/pages/apply/apply?invitionCode=123' + app.globalData.userInfo.pid
     }
   }
 })

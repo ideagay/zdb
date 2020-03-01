@@ -18,7 +18,9 @@ App({
                   success: res => {
                     // 可以将 res 发送给后台解码出 unionId
                     const that = this;
-                    const { encryptedData, iv, userInfo } = res;
+                    const { encryptedData, iv, userInfo } = res; 
+                    wx.setStorageSync('userInfo', userInfo);
+                    that.globalData.userInfo = userInfo;
                     wx.request({
                       method: 'POST',
                       url: `${config.apiUrl}/wxlogin`,
@@ -34,6 +36,11 @@ App({
                           wx.setStorageSync('userInfo', res.data.data || userInfo);
                           that.globalData.userInfo = res.data.data || userInfo;
                         }
+                      },
+                      fail: function(res) {
+                        wx.showToast({
+                          title: '网络请求失败',
+                        })
                       }
                     })
                     // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
@@ -51,7 +58,6 @@ App({
         }
       }
     })
-    
   },
   globalData: {
     userInfo: wx.getStorageSync('userInfo') || {}

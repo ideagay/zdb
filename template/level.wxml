@@ -1,0 +1,5 @@
+<template name="level">
+  <view>
+    <text class="user-level">等级：{{['试用', '店长', '经理', '合伙人'][level || 0]}}</text>
+  </view>  
+</template>

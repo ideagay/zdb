@@ -33,7 +33,7 @@
     </view>
     <view wx:else>
       <view class="tip">
-        分享好用开通店长，赚提成
+        分享好友开通店长，赚提成
       </view>
       <view class="table">
         <view class="item title top-left">级别</view>
@@ -53,7 +53,7 @@
         <view class="item last-line">9/个</view>
         <view class="item last-line">4%返现</view>
       </view>
-      <view class="btn">招募我的店长</view>
+      <button class="btn" open-type="share">招募我的店长</button>
     </view>
   </view>
 </view>

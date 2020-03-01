@@ -1,13 +1,13 @@
 <!--index.wxml-->
+<import src="../../template/level.wxml"/>
+
 <view class="pg-index">
   <view class="userinfo">
     <view>
       <view>
       <text class="nickname">{{userInfo.nickName}}</text>
        </view> 
-      <view>
-        <text class="user-level">等级：试用</text>
-      </view>
+      <template is="level" data="{{level: userInfo.level}}"/>
     </view>
       <image bindtap="bindViewTap" class="user-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
   </view>

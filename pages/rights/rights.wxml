@@ -1,4 +1,6 @@
 <!--pages/rights.wxml-->
+<import src="../../template/level.wxml"/>
+
 <view class="pg-rights">
   <view class="userinfo">
     <image bindtap="bindViewTap" class="user-avatar" src="{{userInfo.avatarUrl}}"         mode="cover"></image>
@@ -7,9 +9,7 @@
           <text class="nickname">{{userInfo.nickName}}</text>
        </view> 
     </view>
-    <view>
-        <text class="user-level">等级：试用</text>
-      </view>  
+    <template is="level" data="{{level: userInfo.level}}"/>
   </view>
   <view class="content">
     <view class="money">333<text class="unit">元</text></view>
